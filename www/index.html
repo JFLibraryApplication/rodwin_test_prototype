@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title>Single View App template</title>
+    
+    <script src="appframework/angular.min.js"></script>
+</head>
+<body> 
+<div ng-controller="Location">
+    <select name="" id="" ng-model="selected_location" ng-options="location.name for location in locations">
+        <option value="">Choose a Location</option>
+    </select>
+    <br>
+    selected location = {{selected_location.name}}
+</div>
+    <script>
+        function Location($scope){
+            
+            $scope.locations=[
+                {name: "Main Entrance"},
+                {name: "Back Entrance"},
+                {name: "Sicence Hall Entrance"},
+                {name: "Vines Entrance"}
+            ];
+        }
+    </script>
+</body>
+</html>    
